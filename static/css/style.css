@@ -349,6 +349,75 @@ body {
     border: 1px solid var(--status-high);
 }
 
+/* Predictive Panel */
+.predictive-panel {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.7) 0%, rgba(139, 92, 246, 0.15) 100%);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
+/* SVG Map */
+.svg-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+}
+.stadium-svg {
+    max-width: 100%;
+    height: auto;
+}
+.map-outline {
+    stroke: var(--glass-border);
+    stroke-width: 4;
+}
+.map-sector {
+    fill: var(--status-low);
+    stroke: #0f172a;
+    stroke-width: 2;
+    transition: fill 1s ease;
+    cursor: pointer;
+}
+.map-sector:hover {
+    opacity: 0.8;
+}
+.svg-label {
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* Terminal UI */
+.terminal-card {
+    grid-column: 1 / -1; /* Make it span full width if needed, or just let grid handle */
+}
+.terminal-window {
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 6px;
+    height: 250px;
+    overflow-y: auto;
+    padding: 12px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: #10b981; /* terminal green */
+}
+.terminal-line {
+    margin-bottom: 4px;
+    border-bottom: 1px dashed rgba(16, 185, 129, 0.2);
+    padding-bottom: 2px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .dashboard-grid {
